@@ -12,15 +12,9 @@ class InvitePlugin implements Plugin
         return 'filament-invite';
     }
 
-    public function register(Panel $panel): void
-    {
+    public function register(Panel $panel): void {}
 
-    }
-
-    public function boot(Panel $panel): void
-    {
-
-    }
+    public function boot(Panel $panel): void {}
 
     public static function make(): static
     {

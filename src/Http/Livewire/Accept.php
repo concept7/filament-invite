@@ -2,8 +2,6 @@
 
 namespace Concept7\FilamentInvite\Http\Livewire;
 
-use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Component;
 use App\Models\User;
 use Concept7\FilamentInvite\Events\InviteProcessedEvent;
 use Concept7\FilamentInvite\Models\Invite;
@@ -16,6 +14,8 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\HasRoutes;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\SimplePage;
+use Filament\Schemas\Components\Component;
+use Filament\Schemas\Schema;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
