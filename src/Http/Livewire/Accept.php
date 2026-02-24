@@ -130,27 +130,19 @@ class Accept extends SimplePage
 
     }
 
-    public function form(Schema $schema): Schema
+    public function defaultForm(Schema $schema): Schema
     {
-        return $schema;
+        return $schema
+            ->statePath('data');
     }
 
-    /**
-     * @return array<int|string, string|\Filament\Schemas\Schema>
-     */
-    protected function getForms(): array
+    public function form(Schema $schema): Schema
     {
-        return [
-            'form' => $this->form(
-                $this->makeForm()
-                    ->schema([
-                        $this->getEmailFormComponent(),
-                        $this->getPasswordFormComponent(),
-                        $this->getPasswordConfirmationFormComponent(),
-                    ])
-                    ->statePath('data'),
-            ),
-        ];
+        return $schema->schema([
+            $this->getEmailFormComponent(),
+            $this->getPasswordFormComponent(),
+            $this->getPasswordConfirmationFormComponent(),
+        ]);
     }
 
     protected function getEmailFormComponent(): Component
